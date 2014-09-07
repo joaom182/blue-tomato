@@ -19,6 +19,7 @@ footer{
 	border-top: 5px solid #033950;
 	padding: 22px 0;
 	margin-top: 22px;
+	min-height: 400px;
 }
 
 #chart{
