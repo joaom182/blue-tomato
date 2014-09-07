@@ -1,14 +1,24 @@
+html, body{
+	font-size: 100%;
+	height: 100%;
+}
+
 body{
-	background: #FEBA00;
+	background: #FFFFFF;
+	font-size: 12px;
+	font-family: 'Open Sans';
+}
+
+.area{
+	width:980px;
+	margin:0 auto;
 }
 
 footer{
-	position: absolute;
-	background: #2CA02C;
-	height: 200px;
-	bottom: 0;
-	left: 0;
-	right: 0;
+	background: #064868;
+	border-top: 5px solid #033950;
+	padding: 22px 0;
+	margin-top: 22px;
 }
 
 #chart{
@@ -17,6 +27,110 @@ footer{
 }
 
 h1{
-	color:#2CA02C;
+	font-size:2em;
+	font-weight: 100;
+	color:#064868;
 	text-align: center;
 }
+
+h2{
+	font-size:1.4em;
+	font-weight: 100;
+	color:#FFFFFF;
+	border-left: 2px solid #FFFFFF;
+	padding: 0 11px;
+}
+
+h3{
+	font-size: 1.1em;
+	font-weight: 400;
+	color:#FFFFFF;
+	margin: 0;
+	margin-bottom: 6px;
+	padding: 0;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color:#FFFFFF;
+	text-decoration: none;
+}
+
+a:hover{
+	color:#FCD209;
+}
+
+.candidate h2{
+	display:inline-block;
+	vertical-align: top;
+}
+
+.candidate figure{
+	display: inline-block;
+	width: 60px;
+	margin: 0;
+	padding: 0;
+}
+
+.candidate .tweets{
+	margin-top: 22px;
+}
+
+.candidate figure img{
+	width:100%;
+	border-radius: 50%;
+}
+
+.tweets{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.tweets li{
+	margin-top: 11px;
+	border-top: 1px solid #033950;
+	padding-top: 11px;
+}
+
+.tweets li:first-child{
+	border-top: 0;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.tweet:before,
+.tweet:after{
+	display:table;
+	content: ' ';
+}
+
+.tweet:after{
+	clear: both;
+}
+
+.tweet figure{
+	width:45px;
+	float: left;
+}
+
+.tweet img{
+	width:100%;
+	border-radius: 100%;
+}
+
+.tweet h3,
+.tweet p{
+	margin-left: 55px;
+}
+
+.tweet p {
+	color:#C2C2C2;
+	font-style: italic;
+}
+
+

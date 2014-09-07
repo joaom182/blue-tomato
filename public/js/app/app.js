@@ -22,17 +22,17 @@
 		$scope = $scope || {};
 
 		var socket = io.connect('http://localhost:3000');
-		var _dilmaHistory = ['Dilma Rosseff', 0];
-		var _aecioHistory = ['Aécio Neves', 0];
-		var _marinaHistory = ['Marina Silva', 0];
+		var _dilmaHistory = ['@dilmabr', 0];
+		var _aecioHistory = ['@AecioNeves', 0];
+		var _marinaHistory = ['@silva_marina', 0];
 		var chart = c3.generate({
 			bindto: '#chart',
 			data: {
 				columns: [_dilmaHistory, _aecioHistory, _marinaHistory],
 				types: {
-					'Dilma Rosseff': 'area-spline',
-					'Aécio Neves': 'area-spline',
-					'Marina Silva': 'area-spline'
+					'@dilmabr': 'area-spline',
+					'@AecioNeves': 'area-spline',
+					'@silva_marina': 'area-spline'
 				}
 			}
 		});
@@ -60,7 +60,7 @@
 			if(isNaN(percent))
 				return;
 
-			if(history.length > 30)
+			if(history.length > 16)
 				history.remove(history[1]);
 
 			history.push(percent);
@@ -74,19 +74,19 @@
 
 		socket.on('dilma', function (tweet) {
 			safeApply($scope, function(){
-				$scope.dilmaTweets.push(tweet);
+				$scope.dilmaTweets.unshift(tweet);
 			});
 		});
 
 		socket.on('marina', function (tweet) {
 			safeApply($scope, function(){
-				$scope.marinaTweets.push(tweet);
+				$scope.marinaTweets.unshift(tweet);
 			});
 		});
 
 		socket.on('aecio', function (tweet) {
 			safeApply($scope, function(){
-				$scope.aecioTweets.push(tweet);
+				$scope.aecioTweets.unshift(tweet);
 			});
 		});
 

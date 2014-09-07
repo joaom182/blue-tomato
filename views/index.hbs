@@ -1,9 +1,113 @@
 <script type="text/javascript" src="/js/app/app.js"></script>
 
 <div data-ng-app="twitterChart">
-	<h1>Popularidade dos principais presidenciáveis</h1>
+	<h1>@mention aos principais presidenciáveis a partir de agora!</h1>
 	<div data-ng-controller='ChartController'>
 		<div id="chart"></div>
-		<footer></footer>
+		<footer>
+			<div class="area">
+				<div class="row-10">
+					<div class="col-md-3-3">
+						<article class="candidate">
+							<header>
+								<h2>
+									<a href="http://www.twitter.com/dilmabr" target="_blank">@dilmabr</a>
+								</h2>
+								<figure>
+									<img src="https://pbs.twimg.com/profile_images/496237065537732608/HwSj2e2B.jpeg" alt="">
+								</figure>
+							</header>
+
+							<ul class="tweets">
+								<li data-ng-repeat="tweet in dilmaTweets.take(5)">
+									<article class="tweet">
+										<header>
+											<figure>
+												<a ng-href="http://www.twitter.com/\{{tweet.user.screen_name}}" target="_blank">
+													<img ng-src="\{{tweet.user.profile_image_url}}" alt="" />
+												</a>
+											</figure>
+											<h3>
+												<a ng-href="http://www.twitter.com/\{{tweet.user.screen_name}}" target="_blank">@\{{tweet.user.screen_name}}
+												</a>
+											</h3>
+										</header>
+										<p>\{{tweet.text}}</p>
+									</article>
+								</li>
+							</ul>
+
+						</article>
+					</div>
+					<div class="col-md-3-3">
+						<article class="candidate">
+							<header>
+								<h2>
+									<a href="http://www.twitter.com/AecioNeves" target="_blank">@AecioNeves</a>
+								</h2>
+								<figure>
+									<img src="https://pbs.twimg.com/profile_images/501331826607022080/u4jPAyae.jpeg" alt="">
+								</figure>
+							</header>
+
+							<ul class="tweets">
+								<li data-ng-repeat="tweet in aecioTweets.take(5)">
+									<article class="tweet">
+										<header>
+											<figure>
+												<a ng-href="http://www.twitter.com/\{{tweet.user.screen_name}}" target="_blank">
+													<img ng-src="\{{tweet.user.profile_image_url}}" alt="" />
+												</a>
+											</figure>
+											<h3>
+												<a ng-href="http://www.twitter.com/\{{tweet.user.screen_name}}" target="_blank">@\{{tweet.user.screen_name}}
+												</a>
+											</h3>
+										</header>
+										<p>\{{tweet.text}}</p>
+									</article>
+								</li>
+							</ul>
+
+						</article>
+						
+					</div>
+					<div class="col-md-3-3">
+						<article class="candidate">
+							<header>
+								<h2>
+									<a href="http://www.twitter.com/silva_marina" target="_blank">
+										@silva_marina
+									</a>
+								</h2>
+								<figure>
+									<img src="https://pbs.twimg.com/profile_images/502534288248958976/3vUYXQun_reasonably_small.png" alt="">
+								</figure>
+							</header>
+
+							<ul class="tweets">
+								<li data-ng-repeat="tweet in marinaTweets.take(5)">
+									<article class="tweet">
+										<header>
+											<figure>
+												<a ng-href="http://www.twitter.com/\{{tweet.user.screen_name}}" target="_blank">
+													<img ng-src="\{{tweet.user.profile_image_url}}" alt="" />
+												</a>
+											</figure>
+											<h3>
+												<a ng-href="http://www.twitter.com/\{{tweet.user.screen_name}}" target="_blank">@\{{tweet.user.screen_name}}
+												</a>
+											</h3>
+										</header>
+										<p>\{{tweet.text}}</p>
+									</article>
+								</li>
+							</ul>
+
+						</article>					
+					</div>
+				</div>
+			</div>
+		</footer>
 	</div>
 </div>
