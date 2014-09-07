@@ -21,7 +21,7 @@
 	twitterChartApp.controller('ChartController', ["$scope", "safeApply", function($scope, safeApply){
 		$scope = $scope || {};
 
-		var socket = io.connect('http://localhost:5255');
+		var socket = io.connect('http://localhost:3000');
 		var _dilmaHistory = ['Dilma Rosseff', 0];
 		var _aecioHistory = ['Aécio Neves', 0];
 		var _marinaHistory = ['Marina Silva', 0];
@@ -56,6 +56,9 @@
 		function _addToHistory(history, tweets){
 			var _total = tweets.length;
 			var percent = _getPercent(_total);
+
+			if(isNaN(percent))
+				return;
 
 			if(history.length > 30)
 				history.remove(history[1]);

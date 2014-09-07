@@ -1,7 +1,7 @@
+var http = require('http');
 var app = require('./app');
-var server = app.listen(5255, function(){
-	console.log('Server is running');
-});
+
+var server = http.createServer(app);
 var io = require('socket.io')(server);
 var twitter = require('./twitter/twitter');
 
@@ -30,6 +30,8 @@ twitter.stream('statuses/filter', {
 		if(global.socket == null)
 			return;
 
+		console.log('Tweet Sent to Client');
+
 		trackTweets.dilma.forEach(function(d){
 			if(tweet.text.toLowerCase().contains(d.toLowerCase()))
 				global.socket.emit('dilma', tweet);
@@ -45,4 +47,9 @@ twitter.stream('statuses/filter', {
 				global.socket.emit('marina', tweet);
 		});
 	});
+});
+
+server.listen(process.env.PORT || 3000, process.env.IP || '0.0.0.0', function(){
+	var addr = server.address();
+	console.log("Application listening at", addr.address + ":" + addr.port);
 });
