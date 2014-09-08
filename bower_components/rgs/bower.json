@@ -1,0 +1,25 @@
+{
+  "name": "rgs",
+  "version": "1.0.0",
+  "authors": [
+    "João Marcos Mainka <joaom182@hotmail.com>"
+  ],
+  "description": "Responsive Grid System",
+  "main": "rgs.css",
+  "keywords": [
+    "grid",
+    "system",
+    "responsive",
+    "css",
+    "cross",
+    "browser"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

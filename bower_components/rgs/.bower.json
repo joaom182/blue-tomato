@@ -1,0 +1,35 @@
+{
+  "name": "rgs",
+  "authors": [
+    "João Marcos Mainka <joaom182@hotmail.com>"
+  ],
+  "description": "Responsive Grid System",
+  "main": "rgs.css",
+  "keywords": [
+    "grid",
+    "system",
+    "responsive",
+    "css",
+    "cross",
+    "browser"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "homepage": "https://github.com/joaom182/rgs",
+  "_release": "232aecdf02",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "232aecdf0237a4d091962886ebcc838af877c339"
+  },
+  "_source": "git://github.com/joaom182/rgs.git",
+  "_target": "*",
+  "_originalSource": "rgs",
+  "_direct": true
+}
