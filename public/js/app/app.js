@@ -21,7 +21,7 @@
 	twitterChartApp.controller('ChartController', ["$scope", "safeApply", function($scope, safeApply){
 		$scope = $scope || {};
 
-		var socket = io.connect('http://localhost:5000');
+		var socket = io.connect();
 		var _dilmaHistory = ['@dilmabr', 0];
 		var _aecioHistory = ['@AecioNeves', 0];
 		var _marinaHistory = ['@silva_marina', 0];
