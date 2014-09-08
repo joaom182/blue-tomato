@@ -21,7 +21,7 @@
 	twitterChartApp.controller('ChartController', ["$scope", "safeApply", function($scope, safeApply){
 		$scope = $scope || {};
 
-		var socket = io.connect('http://localhost:3000');
+		var socket = io.connect();
 		var _dilmaHistory = ['@dilmabr', 0];
 		var _aecioHistory = ['@AecioNeves', 0];
 		var _marinaHistory = ['@silva_marina', 0];
@@ -91,16 +91,25 @@
 		});
 
 		$scope.$watch('dilmaTweets', function(newValue, oldValue){
+			$scope.dilmaTweets = newValue.distinct(function(a, b){
+				return a.text == b.text;
+			});
 			_updateHistory();
 			_updateChart();
 		}, true);
 
 		$scope.$watch('marinaTweets', function(newValue, oldValue){
+			$scope.marinaTweets = newValue.distinct(function(a, b){
+				return a.text == b.text;
+			});
 			_updateHistory();
 			_updateChart();
 		}, true);
 
 		$scope.$watch('aecioTweets', function(newValue, oldValue){
+			$scope.aecioTweets = newValue.distinct(function(a, b){
+				return a.text == b.text;
+			});
 			_updateHistory();
 			_updateChart();
 		}, true);
