@@ -91,16 +91,25 @@
 		});
 
 		$scope.$watch('dilmaTweets', function(newValue, oldValue){
+			$scope.dilmaTweets = newValue.distinct(function(a, b){
+				return a.text == b.text;
+			});
 			_updateHistory();
 			_updateChart();
 		}, true);
 
 		$scope.$watch('marinaTweets', function(newValue, oldValue){
+			$scope.marinaTweets = newValue.distinct(function(a, b){
+				return a.text == b.text;
+			});
 			_updateHistory();
 			_updateChart();
 		}, true);
 
 		$scope.$watch('aecioTweets', function(newValue, oldValue){
+			$scope.aecioTweets = newValue.distinct(function(a, b){
+				return a.text == b.text;
+			});
 			_updateHistory();
 			_updateChart();
 		}, true);
