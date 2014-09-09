@@ -15,22 +15,26 @@
   <script src="http://blue-tomato.herokuapp.com/socket.io/socket.io.js"></script>
 </head>
 <body>
+  <script type="text/javascript" src="/js/app/app.js"></script>
+
   <div data-ng-app="twitterChart">
-    <h1>@mention aos principais presidenciáveis a partir de agora!</h1>
     <div data-ng-controller='ChartController'>
-      <div id="chart"></div>
-      <footer>
+      <header id="header">
+        <h1>@mention aos principais presidenciáveis a partir de agora!</h1>
+        <div id="chart"></div>
+      </header>
+      <footer id="footer">
         <div class="area">
           <div class="row-10">
             <div class="col-md-3-3">
               <article class="candidate">
                 <header>
-                  <h2>
-                    <a href="http://www.twitter.com/dilmabr" target="_blank">@dilmabr</a>
-                  </h2>
                   <figure>
                     <img src="https://pbs.twimg.com/profile_images/496237065537732608/HwSj2e2B.jpeg" alt="">
                   </figure>
+                  <h2>
+                    <a href="http://www.twitter.com/dilmabr" target="_blank">@dilmabr</a>
+                  </h2>
                 </header>
 
                 <ul class="tweets">
@@ -57,12 +61,12 @@
             <div class="col-md-3-3">
               <article class="candidate">
                 <header>
-                  <h2>
-                    <a href="http://www.twitter.com/AecioNeves" target="_blank">@AecioNeves</a>
-                  </h2>
                   <figure>
                     <img src="https://pbs.twimg.com/profile_images/501331826607022080/u4jPAyae.jpeg" alt="">
                   </figure>
+                  <h2>
+                    <a href="http://www.twitter.com/AecioNeves" target="_blank">@AecioNeves</a>
+                  </h2>
                 </header>
 
                 <ul class="tweets">
@@ -90,14 +94,14 @@
             <div class="col-md-3-3">
               <article class="candidate">
                 <header>
+                  <figure>
+                    <img src="https://pbs.twimg.com/profile_images/502534288248958976/3vUYXQun_reasonably_small.png" alt="">
+                  </figure>
                   <h2>
                     <a href="http://www.twitter.com/silva_marina" target="_blank">
                       @silva_marina
                     </a>
                   </h2>
-                  <figure>
-                    <img src="https://pbs.twimg.com/profile_images/502534288248958976/3vUYXQun_reasonably_small.png" alt="">
-                  </figure>
                 </header>
 
                 <ul class="tweets">
@@ -118,7 +122,6 @@
                     </article>
                   </li>
                 </ul>
-
               </article>          
             </div>
           </div>

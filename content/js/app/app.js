@@ -60,7 +60,7 @@
 			if(isNaN(percent))
 				return;
 
-			if(history.length > 16)
+			if(history.length > 6)
 				history.remove(history[1]);
 
 			history.push(percent);
