@@ -146,6 +146,7 @@ a:hover{
 	font-style: italic;
 }
 
+
 @media only screen and (max-width: 767px), only screen and (max-device-width: 767px), only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
 	.area{
 		width: 100%;
@@ -157,10 +158,6 @@ a:hover{
 		margin-right: -11px;
 		padding-left: 11px;
 		padding-right: 11px;
-	}
-
-	.candidate:first-child{
-		margin-top:0;
 	}
 
 	.candidate > header{
