@@ -4,22 +4,33 @@ html, body{
 }
 
 body{
-	background: #FFFFFF;
+	background: #064868;
 	font-size: 12px;
 	font-family: 'Open Sans';
+}
+
+#header{
+	position: fixed;
+	top:0;
+	left: 0;
+	right:0;
+	background: #FFFFFF;
+	padding: 22px 0;
+}
+
+#footer{
+	position: relative;
+	background: #064868;
+	border-top: 5px solid #033950;
+	padding: 22px 0;
+	margin-top: 401px;
+	min-height: 400px;
+	z-index: 10;
 }
 
 .area{
 	width:980px;
 	margin:0 auto;
-}
-
-footer{
-	background: #064868;
-	border-top: 5px solid #033950;
-	padding: 22px 0;
-	margin-top: 22px;
-	min-height: 400px;
 }
 
 #chart{
@@ -30,6 +41,8 @@ footer{
 h1{
 	font-size:2em;
 	font-weight: 100;
+	margin: 0;
+	margin-bottom: 22px;
 	color:#064868;
 	text-align: center;
 }
@@ -38,7 +51,6 @@ h2{
 	font-size:1.4em;
 	font-weight: 100;
 	color:#FFFFFF;
-	border-left: 2px solid #FFFFFF;
 	padding: 0 11px;
 }
 
@@ -135,3 +147,22 @@ a:hover{
 }
 
 
+@media only screen and (max-width: 767px), only screen and (max-device-width: 767px), only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+	.area{
+		width: 100%;
+	}
+
+	#footer{
+		margin-top: 485px;
+		margin-left: -11px;
+		margin-right: -11px;
+		padding-left: 11px;
+		padding-right: 11px;
+	}
+
+	.candidate > header{
+		margin-top: 33px;
+		text-align: center;
+	}
+
+}
