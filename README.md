@@ -6,7 +6,7 @@ Application made with [Node](http://nodejs.org/) to monitor mentions made to the
 - Navigate to folder `cd /path/to/folder`
 - Install npm and bower dependencies `npm install` & `bower install`
 - Run application `node server.js`
-- Visit [http://localhost:3000](http://localhost:3000)
+- Visit [http://localhost:3000](http://localhost:5000)
 
 ======================
 > Enjoy! :)
