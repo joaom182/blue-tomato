@@ -5,8 +5,8 @@ Application made with [Node](http://nodejs.org/) to monitor mentions made to the
 [Check it live!](http://joaom182.github.io/blue-tomato/)
 
 ###Running on your local workspace
-- Clone repository to your machine `git clone https://github.com/joaom182/blue-tomato.git`
-- Navigate to folder `cd /path/to/folder`
+- Clone repository `git clone https://github.com/joaom182/blue-tomato.git`
+- Navigate to folder `cd blue-tomato`
 - Install npm and bower dependencies `npm install` & `bower install`
 - Run application `node server.js`
 - Visit [http://localhost:3000](http://localhost:5000)
